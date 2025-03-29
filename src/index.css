@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+}
+
+@keyframes gradientBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.neon-border {
+  animation: neonPulse 2s infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #0ff, #ff00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tech-bg {
+  background: linear-gradient(45deg, #000428, #004e92);
+  background-size: 400% 400%;
+  animation: gradientBg 15s ease infinite;
+}
+
+.hover-neon {
+  transition: all 0.3s ease;
+}
+
+.hover-neon:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transform: translateY(-2px);
+}
